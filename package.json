@@ -21,5 +21,15 @@
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "mysql": "^2.17.1"
-  }
+  },
+  "engines": {
+    "node": "11.x"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "express-handlebars",
+    "node",
+    "orm",
+    "mvc"
+  ]
 }

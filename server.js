@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // setting express to serve static content from the public folder in the root directory
-app.use(express.static("public"));
+// app.use(express.static("public"));
 // setting express to use the routes from the burger controller file
 app.use(routes);
 // start listening on the indiated port

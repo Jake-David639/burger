@@ -29,3 +29,16 @@
 
     </div>
 </div>
+
+{{!-- add new burger form --}}
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 text-center new_burger_input">
+            <form action="/burgers/create" method="POST">
+                <input type="text" class="form-control" name="burger_name" value="" id="burgerNameInput">
+                <button type="submit" class="btn btn-primary" id="text-enter-button">Add Brgr</button>
+            </form>
+            <p>Enter a new burger to eat & click "Add Brgr"</p>
+        </div>
+    </div>
+</div>
