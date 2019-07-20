@@ -9,20 +9,26 @@ const orm = {
        connection.query(queryStr,(err, result) => {
         if (err) throw err;
         cb(result);
-    });
-},
-insertOne = (table, cols, vals, cb) => {
-    let queryStr = `INSERT INTO ${table} (${cols.join()}) VALUES (${questionMarkString(vals.length)})`;
-
-    console.log(queryStr);
-    
-    connection.query(queryStr, vals,(err, result) => {
-      if (err) throw err;
-      cb(result);
-    }); 
-},
-updateOne = () => {
+        });
+    },
+    insertOne = (table, cols, vals, cb) => {
+        let queryStr = `INSERT INTO ${table} (${cols.join()}) VALUES (${questionMarkString(vals.length)})`;
         
+        console.log(queryStr);
+        
+        connection.query(queryStr, vals,(err, result) => {
+            if (err) throw err;
+            cb(result);
+        }); 
+    },
+    updateOne = (table, objColVals, condition, cb) => {
+        let queryStr = `UPDATE ${table} SET ${convertObjectToSql(objColVals)} WHERE ${condition}`;
+
+        console.log(queryStr);
+        connection.query(queryStr, (err, result) => {
+        if (err) throw err;
+        cb(result);
+        });
     }
 }
 
