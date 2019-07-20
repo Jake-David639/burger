@@ -21,7 +21,10 @@ router.post('/burgers/create', (req, res) => {
 });
 // put route to update existing burger data
 router.put('/burgers/:id', (req, res) => {
-    
+    burger.update(req.params.id, result => {
+        console.log(result);
+        res.sendStatus(200);
+    });
 });
 
 module.exports = router;
