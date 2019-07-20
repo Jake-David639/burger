@@ -5,7 +5,7 @@ const connection = require('./connection');
 const orm = {
 // todo
     selectAll(table, cb) {
-       let queryStr = `SELECT * FROM ${tableInput};`;
+       let queryStr = `SELECT * FROM ${table};`;
        connection.query(queryStr,(err, result) => {
         if (err) throw err;
         cb(result);
