@@ -2,7 +2,7 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers/burgers_controller.js');
-const PORT = 3306;
+const PORT = process.env.PORT || 3306;
 
 // initiallizing the express app
 const app = express();
