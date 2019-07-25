@@ -7,7 +7,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
     res.redirect('/burgers');
 });
-router.get('/', (req, res) => {
+router.get('/burgers', (req, res) => {
     burger.findAll((burgerData) => {
         res.render("index", { burger_data: burgerData });
     });
