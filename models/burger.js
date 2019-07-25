@@ -3,7 +3,7 @@ const orm = require('../config/orm.js');
 const burger = {
 
     findAll(table, cb) {
-        orm.selectAll().then((table) => {
+        orm.selectAll("burgers").then((table) => {
             console.log(table);
         }).catch(err => {
         console.log(err);

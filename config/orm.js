@@ -3,7 +3,6 @@ const connection = require('./connection');
 
 // create the ORM object to handle the MySQL queries
 const orm = {
-// todo
     selectAll(table, cb) {
        let queryStr = `SELECT * FROM ${table};`;
        connection.query(queryStr,(err, result) => {
