@@ -4,9 +4,9 @@ const burger = require('../models/burger.js');
 const router = express.Router();
 
 // get route to render the homepage
-// router.get('/', (req, res) => {
-//     res.redirect('/burgers');
-// });
+router.get('/', (req, res) => {
+    res.redirect('/burgers');
+});
 router.get('/', (req, res) => {
     burger.all((burgerData) => {
         res.render("index", { burger_data: burgerData });
