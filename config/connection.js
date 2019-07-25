@@ -7,7 +7,10 @@ const connection = mysql.createConnection(process.env.JAWSDB_URL);
 
 // create the connection, throw errors if encountered.
 connection.connect(err => {
-    if (err) throw err;
+    if (err) {
+    console.log(err);
+    console.log(process.env.JAWSDB_URL);
+    }
     else console.log(`Success! Connected as id ${connection.threadId}.`);
 });
 
